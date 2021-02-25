@@ -1,10 +1,11 @@
-import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:scroll_to_id/scroll_to_id.dart';
 
 class NavHeaderDesktop extends StatefulWidget {
   final double opacity;
+  final ScrollToId scrollToId;
 
-  NavHeaderDesktop(this.opacity);
+  NavHeaderDesktop(this.opacity, this.scrollToId);
 
   @override
   _NavBarDesktopState createState() => _NavBarDesktopState();
@@ -74,7 +75,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[0] = true : _isHovering[0] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('home',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(
@@ -106,7 +111,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[1] = true : _isHovering[1] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('about-us',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(
@@ -138,7 +147,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[3] = true : _isHovering[3] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('services',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(
@@ -170,7 +183,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[4] = true : _isHovering[4] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('products',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(
@@ -202,7 +219,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[5] = true : _isHovering[5] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('team',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(
@@ -234,7 +255,11 @@ class _NavBarDesktopState extends State<NavHeaderDesktop> {
                         value ? _isHovering[6] = true : _isHovering[6] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      widget.scrollToId.animateTo('contact',
+                          duration: Duration(seconds: 1),
+                          curve: Curves.decelerate);
+                    },
                     hoverColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(7),
                     child: Column(

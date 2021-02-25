@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_to_id/scroll_to_id.dart';
 
 class SideDrawer extends StatefulWidget {
-  const SideDrawer({
-    Key key,
-  }) : super(key: key);
+  final ScrollToId scrollToId;
+
+  SideDrawer(this.scrollToId);
 
   @override
   _SideDrawerState createState() => _SideDrawerState();
@@ -22,11 +23,15 @@ class _SideDrawerState extends State<SideDrawer> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('home',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'HOME',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),
@@ -40,11 +45,15 @@ class _SideDrawerState extends State<SideDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('about-us',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'ABOUT US',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),
@@ -58,11 +67,15 @@ class _SideDrawerState extends State<SideDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('services',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'SERVICES',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),
@@ -76,11 +89,15 @@ class _SideDrawerState extends State<SideDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('products',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'PRODUCTS',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),
@@ -94,11 +111,15 @@ class _SideDrawerState extends State<SideDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('team',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'TEAM',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),
@@ -112,11 +133,15 @@ class _SideDrawerState extends State<SideDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  widget.scrollToId.animateTo('contact',
+                      duration: Duration(seconds: 1), curve: Curves.decelerate);
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'CONTACT',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Dosis',
                       fontWeight: FontWeight.w600),

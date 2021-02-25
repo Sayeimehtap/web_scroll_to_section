@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Web Scroll Example',
       theme: ThemeData(
-          primarySwatch: Colors.blue, bottomAppBarColor: Colors.black12),
+          primarySwatch: Colors.blue, bottomAppBarColor: Colors.blueGrey[600]),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );

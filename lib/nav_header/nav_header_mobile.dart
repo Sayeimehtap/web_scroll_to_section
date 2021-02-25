@@ -1,4 +1,3 @@
-import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class NavHeaderMobile extends StatefulWidget {
@@ -29,7 +28,7 @@ class _NavHeaderMobileState extends State<NavHeaderMobile> {
             ),
             SizedBox(width: 3),
             Text(
-              'DELAYOUT',
+              'SCROLL',
               style: TextStyle(
                 color: Theme.of(context).primaryTextTheme.subtitle2.color,
                 fontSize: 30,
@@ -38,42 +37,6 @@ class _NavHeaderMobileState extends State<NavHeaderMobile> {
                 letterSpacing: 3,
               ),
             ),
-            SizedBox(width: 3),
-            Row(
-              children: [
-                IconButton(
-                  icon: Theme.of(context).brightness == Brightness.dark
-                      ? Icon(Icons.brightness_7)
-                      : Icon(Icons.brightness_2_outlined),
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  color: Theme.of(context).primaryTextTheme.subtitle2.color,
-                  onPressed: () {
-                    DynamicTheme.of(context).setBrightness(
-                        Theme.of(context).brightness == Brightness.dark
-                            ? Brightness.light
-                            : Brightness.dark);
-                  },
-                ),
-                SizedBox(width: 3),
-                InkWell(
-                  onHover: (value) {
-                    setState(() {});
-                  },
-                  onTap: () {},
-                  borderRadius: BorderRadius.circular(7),
-                  child: Text(
-                    'TR',
-                    style: TextStyle(
-                        color:
-                            Theme.of(context).primaryTextTheme.subtitle2.color,
-                        fontSize: 15,
-                        fontFamily: 'Dosis',
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),
